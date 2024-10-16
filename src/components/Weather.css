@@ -1,0 +1,112 @@
+* {
+    font-family: sans-serif;
+  }
+  .Main-Container{
+    place-self: center;
+    padding: 40px;
+    background-image: linear-gradient(#550a55,#4800ff);   
+    border-radius: 16px;
+    display: flex;
+    align-items: center;  
+    flex-direction: column;
+  }
+
+  .header-box{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    border-radius: 6px;
+  }
+  .search{
+    display: flex;
+    justify-content: space-between;
+  }
+   .search input[type=text]{
+    border-style: none;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .search input[type=button]{
+    margin-left: 10px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 2ms ease-in;
+  }
+  .search input[type=button]:hover{
+    margin-left: 10px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+  }
+  .body-box{
+    width: 350px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .temp-value{
+    font-size: 4rem;
+    color: whitesmoke;
+    font-weight: 600;
+  }
+  .city-name{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  
+  
+  .footer-box{
+    width: 350px;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .humidity-box{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .humidity-text{
+    font-size:  15px;
+    color: whitesmoke;
+    font-weight: 500;
+    text-align:center;
+    
+  }
+  .humidity-value{
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: 500;
+    text-align: center;
+    
+  }
+
+  .wind-speed-box{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  .windspeed-text{
+    font-size: 15px;
+    color: whitesmoke;
+    font-weight: 500;
+    text-align: center;
+    
+  }
+  .windspeed-value{
+    font-size: 24px;;
+    color: whitesmoke;
+    font-weight: 500;
+    text-align: center;
+    
+  }
+  
