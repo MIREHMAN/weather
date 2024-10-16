@@ -6,6 +6,7 @@ function Weather() {
   useEffect(()=>{
     Search('Islamabad');
   },[])
+
   const inputRef=useRef();
   const [temp, setTemp] = useState("35");
   const [city, setCity] = useState("Rawalpindi");
