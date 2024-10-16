@@ -14,7 +14,7 @@ function Weather() {
   const [wind, setWind] = useState("1.4");
   
 
-  const api_key=process.env.REACT_APP_API_KEY;
+  const api_key='edf7342cbaecac186be5d986e2672268';
 
   const Search = async (input) => {
 
