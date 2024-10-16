@@ -27,17 +27,21 @@
     border-radius: 26px;
     width: 250px;
   }
-  .search input[type=button]{
+  .search-icon {
     margin-left: 10px;
     border-style: none;
-    padding: 15px;
+    padding: 12px;
     border-radius: 26px;
     transition: 2ms ease-in;
+    background-color: whitesmoke;
   }
-  .search input[type=button]:hover{
+  .search-icon img{
+    width: 50%;
+  }
+  .search-icon:hover{
     margin-left: 10px;
     border-style: none;
-    padding: 15px;
+    padding: 12px;
     border-radius: 26px;
     cursor: pointer;
     background-color: white;

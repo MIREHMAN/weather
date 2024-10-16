@@ -1,6 +1,9 @@
 import "../components/Weather.css";
 import { useEffect, useRef, useState } from "react";
 import clearIcon from '../assets/clear.png';
+import searchIcon from '../assets/search1.png';
+import windIcon from '../assets/wind1.png';
+import humidityIcon from '../assets/humidity.png';
 
 function Weather() {
   useEffect(()=>{
@@ -51,8 +54,9 @@ function Weather() {
               
               
             />
-            <input type="button" value={"Se"} onClick={()=>Search(inputRef.current.value)} />
-          </form>
+            </form>
+            <img className="search-icon" src={searchIcon} onClick={()=>Search(inputRef.current.value)} />
+          
         </div>
       </div>
       <div className="body-box">
@@ -64,14 +68,14 @@ function Weather() {
       </div>
       <div className="footer-box">
       <div className="wind-speed-box">
-          <img src="/" alt="wind speed" />
+          <img src={windIcon} alt="wind speed" />
           <div className="windspeed">
             <div className="windspeed-value">{wind} km/hr</div>
             <div className="windspeed-text">Wind Speed</div>
           </div>
         </div>
         <div className="humidity-box">
-          <img src="/" alt="humidity" />
+          <img src={humidityIcon} alt="humidity" />
           <div className="humidity">
             <div className="humidity-value">{`${humidity} %`}</div>
             <div className="humidity-text">Humidity</div>
