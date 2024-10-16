@@ -2,6 +2,10 @@ import "../components/Weather.css";
 import { useEffect, useState } from "react";
 
 function Weather() {
+  useEffect(()=>{
+    Search('London');
+  },[])
+
   const [temp, setTemp] = useState("35");
   const [city, setCity] = useState("Rawalpindi");
   const [humidity, setHumidity] = useState("35");
@@ -17,14 +21,15 @@ function Weather() {
 
       const response= await fetch(url);
       const data= await response.json();
-      console.log(data);
+      setCity(data.name);
+      setTemp(data.main.temp);
+      setWind(data.wind.speed);
+      setHumidity(data.main.humidity)
 
     } catch (error) {
       
     }
-useEffect(()=>{
-  Search('London');
-},[])
+
 
     
   };
