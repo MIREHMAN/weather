@@ -1,45 +1,46 @@
-import { 
-  Container, 
-  InputAdornment, 
-  IconButton, 
-  InputBase, 
-  Paper, 
-  Stack, 
-  Typography, Box 
-} from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
-import ClearIcon from '../assets/clear.png';
-import WindIcon from '@mui/icons-material/WindPower';
-import HumidityIcon from '@mui/icons-material/Water';
-import { useEffect, useRef, useState } from 'react';
-import Grid from '@mui/material/Grid2'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {
+  Container,
+  InputAdornment,
+  IconButton,
+  InputBase,
+  Paper,
+  Stack,
+  Typography,
+  Box,
+} from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import ClearIcon from "../assets/clear.png";
+import WindIcon from "@mui/icons-material/WindPower";
+import HumidityIcon from "@mui/icons-material/Water";
+import { useEffect, useRef, useState } from "react";
+import Grid from "@mui/material/Grid2";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 function Weather() {
-  const api_key = 'edf7342cbaecac186be5d986e2672268';
+  const api_key = "edf7342cbaecac186be5d986e2672268";
 
   const [temp, setTemp] = useState(35);
-  const [city, setCity] = useState('Rawalpindi');
+  const [city, setCity] = useState("Rawalpindi");
   const [humidity, setHumidity] = useState(35);
   const [wind, setWind] = useState(1.4);
 
   const inputRef = useRef();
 
   useEffect(() => {
-    search('Islamabad');
+    search("Islamabad");
   }, []);
 
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#550a55',
+        main: "#550a55",
       },
       secondary: {
-        main: '#4800ff',
+        main: "#4800ff",
       },
     },
     typography: {
-      fontFamily: 'sans-serif',
+      fontFamily: "sans-serif",
     },
     components: {
       MuiPaper: {
@@ -47,10 +48,10 @@ function Weather() {
           root: {
             borderRadius: 16,
             padding: 40,
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'column',
-            background: 'linear-gradient(#550a55,#4800ff)',
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            background: "linear-gradient(#550a55,#4800ff)",
           },
         },
       },
@@ -59,9 +60,9 @@ function Weather() {
           root: {
             padding: 15,
             borderRadius: 26,
-            border: 'white',
+            border: "white",
             width: 250,
-            backgroundColor:'white'
+            backgroundColor: "white",
           },
         },
       },
@@ -70,12 +71,12 @@ function Weather() {
           root: {
             padding: 12,
             borderRadius: 26,
-            border: 'none',
-            transition: '2ms ease-in',
-            backgroundColor: 'whitesmoke',
-            '&:hover': {
-              backgroundColor: 'white',
-              cursor: 'pointer',
+            border: "none",
+            transition: "2ms ease-in",
+            backgroundColor: "whitesmoke",
+            "&:hover": {
+              backgroundColor: "white",
+              cursor: "pointer",
             },
           },
         },
@@ -83,93 +84,93 @@ function Weather() {
       MuiTypography: {
         styleOverrides: {
           tempValue: {
-            fontSize: '4rem',
-            color: 'whitesmoke',
+            fontSize: "4rem",
+            color: "whitesmoke",
             fontWeight: 600,
           },
           cityName: {
-            fontSize: '1.5rem',
-            color: 'whitesmoke',
+            fontSize: "1.5rem",
+            color: "whitesmoke",
             fontWeight: 400,
             letterSpacing: 2,
           },
           humidityText: {
             fontSize: 15,
-            color: 'whitesmoke',
+            color: "whitesmoke",
             fontWeight: 400,
-            textAlign: 'center',
+            textAlign: "center",
           },
           humidityValue: {
             fontSize: 24,
-            color: 'whitesmoke',
+            color: "whitesmoke",
             fontWeight: 600,
-            textAlign: 'center',
+            textAlign: "center",
           },
           windSpeedText: {
             fontSize: 15,
-            color: 'whitesmoke',
+            color: "whitesmoke",
             fontWeight: 400,
-            textAlign: 'center',
+            textAlign: "center",
           },
           windSpeedValue: {
             fontSize: 24,
-            color: 'whitesmoke',
+            color: "whitesmoke",
             fontWeight: 600,
-            textAlign: 'center',
+            textAlign: "center",
           },
         },
         variants: [
           {
-            props: { variant: 'tempValue' },
+            props: { variant: "tempValue" },
             style: {
-              fontSize: '4rem',
-              color: 'whitesmoke',
+              fontSize: "4rem",
+              color: "whitesmoke",
               fontWeight: 600,
             },
           },
           {
-            props: { variant: 'cityName' },
+            props: { variant: "cityName" },
             style: {
-              fontSize: '1.5rem',
-              color: 'whitesmoke',
+              fontSize: "1.5rem",
+              color: "whitesmoke",
               fontWeight: 400,
               letterSpacing: 2,
             },
           },
           {
-            props: { variant: 'humidityText' },
+            props: { variant: "humidityText" },
             style: {
               fontSize: 15,
-              color: 'whitesmoke',
+              color: "whitesmoke",
               fontWeight: 400,
-              textAlign: 'center',
+              textAlign: "center",
             },
           },
           {
-            props: { variant: 'humidityValue' },
+            props: { variant: "humidityValue" },
             style: {
-              fontSize: 24,
-              color: 'whitesmoke',
+              fontSize: 20,
+              color: "whitesmoke",
               fontWeight: 600,
-              textAlign: 'center',
+              textAlign: "center",
             },
           },
           {
-            props: { variant: 'windSpeedText' },
+            props: { variant: "windSpeedText" },
             style: {
               fontSize: 15,
-              color: 'whitesmoke',
+              color: "whitesmoke",
               fontWeight: 400,
-              textAlign: 'center',
+              textAlign: "center",
             },
           },
           {
-            props: { variant: 'windSpeedValue' },
+            props: { variant: "windSpeedValue" },
             style: {
-              fontSize: 24,
-              color: 'whitesmoke',
+              fontSize: 20,
+              color: "whitesmoke",
               fontWeight: 600,
-              textAlign: 'center',
+              textAlign: "center",
             },
           },
         ],
@@ -192,69 +193,78 @@ function Weather() {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm" sx={{ mt: 2 }}>
-        <Paper elevation={3} sx={{ p: 2 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <InputBase
-                variant="outlined"
-                placeholder="Enter city name"
-                inputRef={inputRef}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton onClick={() => search(inputRef.current.value)}>
-                      <SearchIcon />
-                    </IconButton>
-                  </InputAdornment>
-                }
-                sx={{
-                  width: '100%',
-                  padding: 1.5,
-                  borderRadius: 26,
-                  border: 'none',
-                }}
-              />
-            </Grid>
-           
-           
-            
-            <Stack direction="column" >
-            <Grid item xs={6} sm={6} md={6} lg={6}>
-           
-                <img src={ClearIcon} width={100}/>
-                <Typography variant="tempValue">{temp}&#8451;</Typography>
-                <Typography variant="cityName">{city}</Typography>
-               
-            </Grid>
-            </Stack>
+        <Paper elevation={3} sx={{ p: 4, pt:12, pb:12, display:'flex', flexDirection:'column', justifyContent:'center', }}>
+          <Grid container spacing={12}>
+            <Box sx={{ margin: "auto" }}>
+              <Grid item xs={12}>
+                <InputBase
+                  variant="outlined"
+                  placeholder="Enter city name"
+                  inputRef={inputRef}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => search(inputRef.current.value)}
+                      >
+                        <SearchIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  sx={{
+                    width: "100%",
+                    padding: 1.5,
+                    borderRadius: 26,
+                    border: "none",
+                  }}
+                />
+              </Grid>
+            </Box>
 
-         <Stack direction='row' spacing={4}>
-            <Grid item xs={6} sm={6} md={6} lg={6}>
-              <Stack direction="row" spacing={1}>
-                <WindIcon sx={{color:'whitesmoke'}} />
-                <Stack direction='column'>
-                <Typography variant="windSpeedText">Wind Speed</Typography>
-                <Typography variant="windSpeedValue">{wind} km/hr</Typography>
+            <Box sx={{ margin: "auto" }}>
+              <Grid item xs={12} sm={3} md={3} lg={3}>
+                <Stack direction="column" sx={{ alignItems: "center" }}>
+                  <img src={ClearIcon} width={100} alt="weather_Position"/>
+                  <Typography variant="tempValue">{temp}&#8451;</Typography>
+                  <Typography variant="cityName">{city}</Typography>
                 </Stack>
-                
+              </Grid>
+            </Box>
+
+            <Box sx={{ margin: "auto" }}>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <Stack direction="row" spacing={6}>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Stack direction="row" spacing={1} sx={{alignItems:'center'}}>
+                    <WindIcon sx={{ color: "whitesmoke" }} />
+                    <Stack direction="column">
+                      <Typography variant="windSpeedText">
+                        Wind Speed
+                      </Typography>
+                      <Typography variant="windSpeedValue">
+                        {wind} km/hr
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Stack direction="row" spacing={1} sx={{alignItems:'center'}}>
+                    <HumidityIcon sx={{ color: "whitesmoke" }} />
+                    <Stack direction="column">
+                      <Typography variant="humidityText">Humidity</Typography>
+                      <Typography variant="humidityValue">
+                        {humidity}%
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>
               </Stack>
             </Grid>
-            <Grid item xs={6} sm={6} md={6} lg={6}>
-              <Stack direction="row" spacing={1}>
-                <HumidityIcon sx={{color:'whitesmoke'}} />
-                <Stack direction='column'>
-                <Typography variant="humidityText">Humidity</Typography>
-                <Typography variant="humidityValue">{humidity}%</Typography>
-                </Stack>
-              </Stack>
-            </Grid>
-            </Stack>
+            </Box>
           </Grid>
         </Paper>
       </Container>
     </ThemeProvider>
-
-);
+  );
 }
-  
 
 export default Weather;
